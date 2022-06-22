@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oder_Pizza_Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body x-data="{
+    open: false,
+    showPizzaCart:false,
+    smallQauntity:0,
+    smallTotal:0,
+    buySmall(){
+alert('fun')
+       this.smallQauntity += 1
+       this.smallTotal += 305 
+    }
+}">
+    
+    <header>
+        <h1>
+            <b>PERFACT PIZZA</b>
+        </h1>
+
+        <!-- <h5>
+            <i>We deliver exactley what you craving for!!!!!!!!!!!!!!</i>
+        </h5> -->
+        <h1 x-text="smallQauntity">
+        </h1>
+
+        <h1 x-text="smallTotal">
+        </h1>
+        
+
+        <div class="f1">
+        
+                <button x-on:click="showPizzaCart = true">
+                    <img src="images/cart.png" width="25" alt="">
+                    show Cart</button>
+        </div></div>
+    </header>
+    </header>
+
+
+    <div x-data="{open: false}">
+        <div class="cart box" x-show="showPizzaCart">
+            <div class="PizzaCart" x-data="showPizzaCart">
+                <div> 
+                    <button x-on:click="showPizzaCart = !false">
+                        <img src="images/cart.png" width="25" alt="">
+                        close Cart</button>
+                </div>
+
+                <h6>Please Place your Oder Here</h6>
+                <h5>Shopping Cart</h5>
+                <table align="center">
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>SubTotal</th>
+                    </tr> -->
+                    <!-- for item 1 -->
+                    <tr>
+                        <td>
+                            Peperoni-and-Cheese
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td> R 620</td>
+                    </tr>
+                    <!-- for item 2 -->
+                    <tr>
+                        <td>
+                            Basil-and-Chicken
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td> R 620</td>
+                    </tr>
+                    <!-- item last -->
+
+                    <tr>
+                        <td>
+                            Margherita Pizza
+                        </td>
+                        <td>
+                            <input type="number" value="1">
+                        </td>
+                        <td> R 620</td>
+                    </tr>
+
+                </table>
+                <div class="totalPrice">
+                    <table align="center">
+                        <tr>
+                            <td>Total</td>
+                            <td>R1000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h4>Plathero of Pizzas to choose from</h4>
+        <div class="pizzas">
+            <div class="pizza1 Box">
+                <div>
+                    <h6>Large Pizza</h6>
+                    <h5> Peperoni-and-Cheese</h5>
+                    <h7>Price: R350,00</h7>
+                    <p>This is a tried-and-true cheese Pizza<br></br>
+                        made of dough,souce cheese and pepperoni </p>
+                </div>
+                <div class="pizza1">
+                    <img src="images/pic4.jpg" width="300px" height="400px">
+                </div>
+                <button>Add To cart</button>
+                <a href="">Remove from Cart</a>
+            </div>
+
+            <div class="pizza2 Box">
+
+                <h6>Meduim pizza</h6>
+                <h5> Basil-and-Chicken</h5>
+                <h7>Price: R310,00</h7>
+                <p>This is a Basil Pizza made of basil, Vienna sausage, salami, Arugula<br></br>
+                    red peppers, provolone cheese, chicken stripes, and tai </p>
+                <div class="pizza2">
+                    <img src="images/pic2.jpg" alt="smallpizza images width=" 200px height="300px">
+                </div>
+                <button>Add To cart</button>
+                <a href="">Remove from Cart</a>
+            </div>
+
+
+            <div class="pizza3 Box">
+                <h6>Small Pizza</h6>
+                <h5> Margherita Pizza </h5>
+                <h7>Price: R305,00</h7>
+                <p>This is an italian mother of pizzas made of lashing fresh tomato souce <br></br>
+                    and mozarella cheese with added basil leaves on top. </p>
+
+                <div class="pizza1">
+                    <img src="images/pic3.jpg" width="400px" height="300px">
+                </div>
+                <button v-on:click="buySmall()"> add to cart</button>
+                    
+                <button>remove from cart</button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="allFooter">
+            <div class="names box">
+                <div>Name: Perfact Pizza </div>
+                <div>Owner: Mat Greene</div>
+                <div>contact No: 013 223 1678</div>
+                <div>email: perfactpizza@gmail.com</div>
+            </div>
+
+
+            <div class="contacts box">
+                <div>company Adress: p.o Box 1092</div>
+                <div>Mbombela</div>
+                <div>Sidlamafa</div>
+                <div>1332</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
